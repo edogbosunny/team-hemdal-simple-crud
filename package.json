@@ -13,7 +13,7 @@
     "test": "nyc mocha  test/**/*test.js --exit",
     "coverage": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text --cache mocha test/**/*test.js --timeout 10000 --exit",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "lint-fix": "eslint --fix ./ --ext .js --color",
+    "lint-fix": "eslint --f ix ./ --ext .js --color",
     "postinstall": "npm run build:server"
   },
   "repository": {
