@@ -7,7 +7,7 @@
     "clean": "rimraf ./dist",
     "build:server": "npm run clean && babel server --out-dir dist/server && babel index.js -d dist/ --copy-files ",
     "start": " node dist/index.js",
-    "build": "babel server -d dist/server && babel app.js -d dist",
+    "build": "babel server -d dist/server && babel index.js -d dist",
     "start:dev": "node_modules/.bin/nodemon index.js --exec babel-node -- ",
     "lint": "eslint *.js --fix",
     "test": "nyc mocha  test/**/*test.js --exit",
