@@ -10,9 +10,9 @@
     "build": "babel server -d dist/server && babel index.js -d dist",
     "start:dev": "node_modules/.bin/nodemon index.js --exec babel-node -- ",
     "lint": "eslint *.js --fix",
-    "test": "nyc mocha  test/**/*test.js --exit",
-    "coverage": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text --cache mocha test/**/*test.js --timeout 10000 --exit",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "test": "nyc --reporter=html --reporter=text --reporter=lcov mocha test/test.js --compilers js:babel-core/register --exit",
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --compilers js:babel-core/register test/test.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint-fix": "eslint --f ix ./ --ext .js --color",
     "postinstall": "npm run build:server"
   },
