@@ -1,4 +1,4 @@
-import { Todo } from '../models/index';
+import { Todo } from '../models';
 
 import statusResponse from '../helpers/returnStatus';
 import validateTodoInput from '../validation/todo';
@@ -7,12 +7,13 @@ import validateTodoInput from '../validation/todo';
 // const Todo = require('../models').Todo;
 
 class TodoClass {
-  static createTodo(req, res) {
-    console.log(req.body);
+  static create(req, res) {
+    // console.log(req.body);
     const { errors, isValid } = validateTodoInput(req.body);
     if (!isValid) {
       return statusResponse.sendResponseErr(res, 400, false, errors);
     }
+
     return Todo.create({
       title: req.body.title,
     })

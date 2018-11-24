@@ -15,6 +15,6 @@ router.get('/', (req, res) => res.status(200).json({
   },
 }));
 
-router.post('/api/v1/todo', todoController.createTodo);
+router.post('/api/v1/todo', todoController.create);
 
 export default router;
