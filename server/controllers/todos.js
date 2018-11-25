@@ -1,4 +1,4 @@
-import { Todo } from '../models';
+import { Todo } from '../models/todo';
 
 import statusResponse from '../helpers/returnStatus';
 import validateTodoInput from '../validation/todo';
