@@ -2,10 +2,13 @@ import express from 'express';
 import morgan from 'morgan';
 import bodyParser from 'body-parser';
 
-const PORT = process.env.PORT || 4000;
+import routes from './server/routes';
+
+const PORT = process.env.PORT || 4001;
 
 const app = express();
 
+app.use(routes);
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -13,3 +16,5 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.listen(PORT, () => {
   console.log(`connected on port ${PORT}`);
 });
+
+export default app;
