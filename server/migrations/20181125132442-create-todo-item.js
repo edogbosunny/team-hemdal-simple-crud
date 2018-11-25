@@ -23,6 +23,15 @@ export default {
         allowNull: false,
         type: Sequelize.DATE,
       },
+      todoId: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        refrences: {
+          model: 'Todos',
+          key: 'id',
+          as: 'todoId',
+        },
+      },
     });
   },
   // eslint-disable-next-line no-unused-vars
