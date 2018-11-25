@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 
 import routes from './server/routes';
 
-const PORT = process.env.PORT || 4001;
+const PORT = process.env.PORT || 4002;
 
 const app = express();
 
