@@ -26,7 +26,7 @@ export default {
       todoId: {
         type: Sequelize.INTEGER,
         onDelete: 'CASCADE',
-        refrences: {
+        references: {
           model: 'Todos',
           key: 'id',
           as: 'todoId',
