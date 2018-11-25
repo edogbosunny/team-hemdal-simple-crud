@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "postgres",
+    "username": "heimdal",
     "password": null,
-    "database": "postgres",
+    "database": "todo_app",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
